@@ -20,9 +20,7 @@
       "database_id": "fba7f18c-7545-4e67-a2e6-6b21baaebdd6",
       "migrations_dir" :"drizzle"
     }
-  ],
-  "vars": { "STRIPE_SECRET_KEY": "sk_test_51PkkQkAyOr5DFvqASVQHyK6KyHlWV3Lc7CScdKf6wdNE0rxmRfJBhqzHuojMWsOyQjhSeigXM92bfSo9AsOKHDzD00Qfc2OQ6x",
-  "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY":"pk_test_51PkkQkAyOr5DFvqAY25qaIjE6wvt7TaHpJ9fcxERu1zV6wu8oYLLvdy2W7HZJ7vSttSF7cz76ddDdWcvzfHU5cUt00j7LtKp9z"
+  ]
 }
 
   /**
