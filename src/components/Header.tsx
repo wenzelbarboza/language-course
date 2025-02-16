@@ -52,7 +52,7 @@ export default function Header() {
           </Link>
           <Link
             href="#contact"
-            className="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700"
+            className="bg-customOrange hover:bg-customBlue-button text-white px-4 py-2 rounded-full "
           >
             Contact Now
           </Link>

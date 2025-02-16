@@ -2,22 +2,22 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="contact-section py-20 lg:py-40 relative z-10"
+      className="contact-section py-20 lg:py-40 relative z-10 sm:p-0 p-2"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
-          <div className="lg:w-1/2 mb-10 lg:mb-0">
-            <h2 className="text-3xl font-bold mb-6">
+          <div className="lg:w-1/2 mb-10 lg:mb-0 text-white">
+            <h2 className="text-3xl font-medium mb-8">
               Feel Free To Send Us a Message About Your Website Needs
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className=" mb-8 font-extralight">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer
               ket eismod tempor incididunt ut labore et dolores
             </p>
             <div className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-600 mr-2"
+                className="h-6 w-6  mr-2"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -30,45 +30,42 @@ export default function Contact() {
                 />
               </svg>
               <span className="font-semibold">For any enquiry, Call Us: </span>
-              <a
-                href="tel:010-020-0340"
-                className="text-blue-600 hover:underline ml-2"
-              >
+              <a href="tel:010-020-0340" className=" hover:underline ml-2">
                 010-020-0340
               </a>
             </div>
           </div>
           <div className="lg:w-1/2 lg:pl-12">
-            <form className="bg-gray-100 p-8 rounded-lg shadow-lg">
+            <form className="bg-white lg:p-14 md:p-8 p-4 rounded-3xl shadow-lg">
               <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 rounded-3xl border  focus:outline-none   bg-customBlue-inp border-none"
                   required
                 />
                 <input
                   type="text"
                   placeholder="Surname"
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 rounded-3xl border  focus:outline-none   bg-customBlue-inp border-none"
                   required
                 />
               </div>
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+                className="w-full px-4 py-2 rounded-3xl border  focus:outline-none   mb-4 bg-customBlue-inp border-none"
                 required
               />
               <textarea
                 placeholder="Message"
                 rows={4}
-                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+                className="w-full px-4 py-2 rounded-2xl border  focus:outline-none focus:ring-4  mb-4 bg-customBlue-inp border-none"
                 required
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300"
+                className="w-full bg-customBlue-button text-white px-6 py-3 rounded-3xl hover:bg-customOrange transition duration-300"
               >
                 Send Message
               </button>

@@ -20,7 +20,7 @@
   .contact-section::after {
     content: '';
     position: absolute;
-    top: -50;
+    top: -55;
     left: 0;
     right: 0;
     bottom: 0;
@@ -36,8 +36,31 @@
   @media (min-width: 1024px) { /* lg breakpoint in Tailwind */
     .contact-section::after {
       height: 700px;
+      top: -20;
     }
   }
+
+  /* image background for why section */
+  /* .image-wrapper::before,
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  z-index: -1; 
+}
+
+.image-wrapper::before {
+  top: -10px;
+  left: -10px;
+}
+
+.image-wrapper::after {
+  bottom: -10px;
+  right: -10px;
+} */
+
  
 
 }

@@ -50,10 +50,16 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        customBlue: {
+          inp: "rgb(216, 242, 254)",
+          button: "rgb(73, 161, 231)",
+        },
+        customOrange: "rgb(234, 80, 73)",
       },
       backgroundImage: {
         banner: "url('/banner.jpg')",
-        blackOverlay: "rgba(255, 255, 255, 0.8)",
+        whiteOverlay: "rgba(255, 255, 255, 0.8)",
+        review: "url('/review.jpg')",
       },
       borderRadius: {
         lg: "var(--radius)",
