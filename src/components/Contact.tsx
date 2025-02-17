@@ -1,4 +1,12 @@
+"use client";
+
+import Aos from "aos";
+import { useEffect } from "react";
+
 export default function Contact() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
   return (
     <section
       id="contact"
@@ -6,7 +14,10 @@ export default function Contact() {
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
-          <div className="lg:w-1/2 mb-10 lg:mb-0 text-white">
+          <div
+            className="lg:w-1/2 mb-10 lg:mb-0 text-white"
+            data-aos="fade-right"
+          >
             <h2 className="text-3xl font-medium mb-8">
               Have Questions? We're Here to Help!
             </h2>
@@ -36,7 +47,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <div className="lg:w-1/2 lg:pl-12">
+          <div className="lg:w-1/2 lg:pl-12" data-aos="fade-left">
             <form className="bg-white lg:p-14 md:p-8 p-4 rounded-3xl shadow-lg">
               <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <input

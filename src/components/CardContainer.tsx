@@ -1,6 +1,7 @@
 "use client";
+import Aos from "aos";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 type Props = {
@@ -36,8 +37,11 @@ const Card = ({ imgUrl, backText, backHeading }: Props) => {
 };
 
 const CardContainer = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
   return (
-    <div className="my-12 lg:mb-40">
+    <div className="my-12 lg:mb-40" data-aos="fade-up">
       <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-12 text-center flex flex-col gap-4">
         <p>
           See What Our Learning 

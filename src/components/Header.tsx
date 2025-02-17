@@ -46,10 +46,10 @@ export default function Header() {
             About Us
           </Link>
           <Link href="#services" className="text-gray-600 hover:text-blue-600">
-            Services
+            Courses
           </Link>
           <Link href="#portfolio" className="text-gray-600 hover:text-blue-600">
-            Portfolio
+            Testimonials
           </Link>
           <Link href="#blog" className="text-gray-600 hover:text-blue-600">
             Blog

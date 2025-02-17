@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import Aos from "aos";
+import { useEffect, useState } from "react";
 
 const plans = [
   {
@@ -39,8 +40,12 @@ const plans = [
 ];
 
 export default function PricingTable() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section className="container mx-auto relative z-0">
+    <section className="container mx-auto relative z-0" data-aos="fade-up">
       <div className="relative font-inter antialiased min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden p-10">
         <div className="w-full max-w-6xl mx-auto ">
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-12 text-center">

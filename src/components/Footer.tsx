@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className=" lg:my-5 w-full  mx-auto">
+    <footer className=" lg:my-5 w-full container mx-auto">
       <div className="flex items-center justify-between w-full mb-3 container flex-col sm:flex-row gap-4 sm:gap-0">
         <div className="mb-4 block sm:hidden">
           <Image

@@ -1,6 +1,14 @@
+"use client";
+import Aos from "aos";
+import { useEffect } from "react";
+
 export default function Faq() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section className="container mx-auto py-20">
+    <section className="container mx-auto py-20 " data-aos="fade-down">
       <h1 className="text-3xl font-bold text-center mb-10">FAQs</h1>
       <div className="space-y-4">
         {faqData.map((item, index) => (
