@@ -12,7 +12,7 @@ export default function Banner() {
       id="top"
       className="  bg-banner bg-cover bg-center bg-no-repeat z-[-50] relative "
     >
-      <div className="w-full h-full items-end  bg-white bg-opacity-80 py-20 z-[-49] relative px-2 sm:px-0">
+      <div className="w-full h-screen items-end  bg-white bg-opacity-80 py-20 z-[-49] relative px-2 sm:px-0">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
             <div className="lg:w-[28rem]" data-aos="fade-right">

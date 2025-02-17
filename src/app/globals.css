@@ -7,14 +7,14 @@
   .about-section::after {
     content: '';
     position: absolute;
-    top: -80;
+    top: -95;
     left: 0;
     right: 0;
     bottom: 0;
     background-image: url('/about-bg.png');
     background-position: center;
     background-size: cover;
-    height: 500px;
+    height: 650px;
     z-index: -1; /* Ensure it's behind the content */
   }
   .contact-section::after {

@@ -28,7 +28,7 @@ export default function Review() {
             breakpoints={{
               768: { slidesPerView: 2 }, // Show 2 cards on tablets and larger
             }}
-            className="w-full max-w-4xl"
+            className="w-full max-w-full"
           >
             {[
               {

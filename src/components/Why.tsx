@@ -99,7 +99,7 @@ export default function Why() {
           <h2 className="text-2xl font-medium mb-4 md:mb-8">
             Why choose Portuguese A2
           </h2>
-          <p className="mb-4 md:mb-8 text-sm font-light">
+          <p className="mb-4 md:mb-8 text-sm font-normal">
             Our A2-Level Portuguese Course is designed for beginners who want to
             master the fundamentals of the Portuguese language and speak with
             confidence in just 30 days. With a structured curriculum, expert
