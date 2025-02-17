@@ -4,14 +4,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useEffect } from "react";
+import Aos from "aos";
 
 export default function Review() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
   return (
-    <section className="relative">
-      <div className="w-full h-full bg-white bg-opacity-80 py-20 relative px-2 sm:px-0">
+    <section className="bg-review bg-cover bg-top bg-no-repeat  relative">
+      <div className="w-full h-full items-end  bg-white bg-opacity-80 py-20  relative px-2 sm:px-0">
         <div className="container mx-auto flex flex-col items-center">
           <h2 className="text-2xl font-medium mb-6 text-center w-full">
-            What your students say
+            What our students say
           </h2>
 
           {/* Swiper Carousel */}
@@ -46,7 +51,10 @@ export default function Review() {
               },
             ].map((student, index) => (
               <SwiperSlide key={index} className="flex justify-center">
-                <div className="relative bg-white p-6 rounded-xl shadow-xl border border-gray-200 max-w-md text-center flex flex-col items-center transition-all duration-300 hover:shadow-2xl before:absolute before:inset-0 before:rounded-xl before:shadow-[0_0_20px_5px_rgba(255,0,0,0.3)] before:z-[-1] m-8 mt-16">
+                <div
+                  className="relative bg-white p-6 rounded-xl shadow-xl border border-gray-200 max-w-md text-center flex flex-col items-center transition-all duration-300 hover:shadow-2xl before:absolute before:inset-0 before:rounded-xl before:shadow-[0_0_20px_5px_rgba(255,0,0,0.3)] before:z-[-1] m-8 mt-16"
+                  data-aos="fade-right"
+                >
                   {/* Profile Image - FIXED */}
                   <div className="absolute -top-14 left-3">
                     <img
@@ -57,7 +65,7 @@ export default function Review() {
                   </div>
 
                   {/* Content - FIXED SPACING */}
-                  <div className="mt-12">
+                  <div className="mt-6">
                     <h3 className="text-lg font-bold">{student.name}</h3>
                     <p className="text-gray-600 text-sm mt-2">
                       {student.review}

@@ -1,6 +1,12 @@
+"use client";
+import Aos from "aos";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Banner() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
   return (
     <section
       id="top"
@@ -9,7 +15,7 @@ export default function Banner() {
       <div className="w-full h-full items-end  bg-white bg-opacity-80 py-20 z-[-49] relative px-2 sm:px-0">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
-            <div className="lg:w-[28rem]">
+            <div className="lg:w-[28rem]" data-aos="fade-right">
               <h1 className="text-5xl md:text-5xl font-semibold mb-4 ">
                 Take Your <span className="text-blue-600 ">Portuguese</span> to
                 the next level with
@@ -34,7 +40,7 @@ export default function Banner() {
               </button>
             </form> */}
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2" data-aos="fade-left">
             <Image
               src="/banner-right-image.png?height=400&width=600"
               alt="Team meeting"

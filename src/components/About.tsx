@@ -1,6 +1,13 @@
+"use client";
+import Aos from "aos";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
+
   const services = [
     {
       title: "Learn & Connect",
@@ -31,7 +38,7 @@ export default function About() {
     // <section id="about" className="about-section relative py-20 ">
     <section id="about" className="lg:about-section relative  ">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-2 sm:px-0">
-        <div className="lg:w-1/3 mb-10 lg:mb-0 ">
+        <div className="lg:w-1/3 mb-10 lg:mb-0 " data-aos="fade-right">
           <Image
             src="/about-img.png?height=500&width=400"
             alt="About us"
@@ -40,7 +47,10 @@ export default function About() {
           />
         </div>
         <div className="lg:w-2/3 lg:pl-12">
-          <div className="grid md:grid-cols-2 gap-8 text-white">
+          <div
+            className="grid md:grid-cols-2 gap-8 text-white"
+            data-aos="fade-up"
+          >
             {services.map((service, index) => (
               <div
                 key={index}
