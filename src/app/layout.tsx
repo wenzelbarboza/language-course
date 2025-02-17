@@ -19,8 +19,8 @@ const merriweather = Merriweather({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Space Dynamic - SEO Next.js Template",
-  description: "SEO and Digital Marketing Next.js Template",
+  title: "Portuges A2",
+  description: "Poruguese Language Learning Platform",
   generator: "v0.dev",
 };
 
