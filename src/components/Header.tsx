@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,13 @@ export default function Header() {
     <header className="bg-white  sticky top-0 z-50 px-2 sm:px-0 py-4">
       <div className="container mx-auto flex justify-between items-center py-4">
         <Link href="/" className="text-2xl font-bold">
-          Conver<span className="text-blue-600">sago</span>
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={200}
+            height={200}
+            // className="w-0 h-10 object-contain flex-shrink-0"
+          />
         </Link>
         <nav className="hidden md:flex space-x-4 items-center">
           <Link href="#top" className="text-gray-600 hover:text-blue-600">

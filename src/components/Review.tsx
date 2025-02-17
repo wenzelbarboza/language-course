@@ -160,11 +160,13 @@ export default function Review() {
       <div className="w-full h-full bg-white bg-opacity-80 py-20 relative px-4 sm:px-0">
         <div className="container mx-auto flex flex-col items-center">
           {/* Section Header */}
-          <span className="text-sm text-gray-500 font-medium block mb-2">
-            TESTIMONIAL
-          </span>
+
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            What our students say
+            What our{" "}
+            <span className="bg-text-gradient bg-clip-text text-transparent">
+              students
+            </span>{" "}
+            say
           </h2>
 
           {/* Swiper Carousel */}

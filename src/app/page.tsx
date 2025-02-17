@@ -16,13 +16,14 @@ export default function Home() {
       <Banner />
       <About />
       <Why />
+
+      <CardContainer />
       <Review />
       {/* <Services /> */}
       {/* <Portfolio /> */}
       {/* <Blog /> */}
       {/* <Pricing2 /> */}
       <PricingTable />
-      <CardContainer />
       <Faq />
       <Contact />
     </main>

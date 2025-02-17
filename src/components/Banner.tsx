@@ -18,13 +18,17 @@ export default function Banner() {
             {/* <div className="lg:w-[28rem]" data-aos="fade-right"> */}
             <div className="md:w-[28rem] lg:w-[38rem]" data-aos="fade-right">
               <h1 className="text-5xl lg:text-7xl font-semibold mb-4 ">
-                Take Your <span className="text-blue-600 ">Portuguese</span> to
+                Take Your <span className="text-red-600 ">Portuguese</span> to
                 the next level with
-                <span className="text-red-600 "> Conversago</span>
+                <span className="bg-text-gradient bg-clip-text text-transparent">
+                  {" "}
+                  Portuges A2
+                </span>
               </h1>
-              <p className="text-l mb-6 bg-opacity-50">
-                Space Dynamic is a professional looking Next.js template using
-                Tailwind CSS.
+              <p className="text-l mb-6 opacity-80">
+                Experience expert-designed courses that combine practical
+                learning, cultural immersion, and real-world conversation skill
+                for your success
               </p>
             </div>
             {/* <form className="flex flex-col sm:flex-row gap-4">

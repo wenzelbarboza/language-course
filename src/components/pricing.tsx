@@ -43,6 +43,12 @@ export default function PricingTable() {
     <section className="container mx-auto relative z-0">
       <div className="relative font-inter antialiased min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden p-10">
         <div className="w-full max-w-6xl mx-auto ">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Choose Your{" "}
+            <span className="bg-text-gradient bg-clip-text text-transparent">
+              Plan
+            </span>{" "}
+          </h2>
           <div className="grid gap-6 lg:grid-cols-3 items-start max-w-sm mx-auto lg:max-w-none">
             {plans.map((plan, index) => (
               <div key={index} className="h-full">

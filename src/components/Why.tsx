@@ -31,7 +31,10 @@ export default function Why() {
           data-aos="fade-left"
         >
           <h2 className="text-5xl font-medium mb-4 md:mb-9">
-            Why choose Portuguese A2
+            Why choose{" "}
+            <span className="bg-text-gradient bg-clip-text text-transparent">
+              portuges A2
+            </span>
           </h2>
           <p className="mb-4 md:mb-9 text-lg  font-normal">
             Our A2-Level Portuguese Course is designed for beginners who want to

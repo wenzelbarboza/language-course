@@ -60,6 +60,8 @@ export default {
         banner: "url('/banner.jpg')",
         whiteOverlay: "rgba(255, 255, 255, 0.8)",
         review: "url('/review.jpg')",
+        "text-gradient":
+          "linear-gradient(to bottom left, rgb(113,189,234),rgb(55,126,212))",
       },
       borderRadius: {
         lg: "var(--radius)",
