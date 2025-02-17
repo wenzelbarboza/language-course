@@ -8,11 +8,12 @@ export default function Contact() {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-10 lg:mb-0 text-white">
             <h2 className="text-3xl font-medium mb-8">
-              Feel Free To Send Us a Message About Your Website Needs
+              Have Questions? We're Here to Help!
             </h2>
             <p className=" mb-8 font-extralight">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer
-              ket eismod tempor incididunt ut labore et dolores
+              Reach out to us for course inquiries, enrollment assistance, or
+              general support.Our team is ready to assist you every step of the
+              way!
             </p>
             <div className="flex items-center">
               <svg
