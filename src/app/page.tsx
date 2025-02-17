@@ -8,6 +8,7 @@ import PricingTable from "@/components/pricing";
 import Faq from "@/components/Faq";
 import Why from "@/components/Why";
 import Review from "@/components/Review";
+import CardContainer from "@/components/CardContainer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       {/* <Blog /> */}
       {/* <Pricing2 /> */}
       <PricingTable />
+      <CardContainer />
       <Faq />
       <Contact />
     </main>

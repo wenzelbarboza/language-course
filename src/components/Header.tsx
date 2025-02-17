@@ -29,7 +29,7 @@ export default function Header() {
     <header className="bg-white  sticky top-0 z-50 px-2 sm:px-0 py-4">
       <div className="container mx-auto flex justify-between items-center py-4">
         <Link href="/" className="text-2xl font-bold">
-          Spac<span className="text-blue-600">Dyna</span>
+          Conver<span className="text-blue-600">sago</span>
         </Link>
         <nav className="hidden md:flex space-x-4 items-center">
           <Link href="#top" className="text-gray-600 hover:text-blue-600">

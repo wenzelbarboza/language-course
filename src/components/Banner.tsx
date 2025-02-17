@@ -15,8 +15,9 @@ export default function Banner() {
       <div className="w-full h-screen items-end  bg-white bg-opacity-80 py-20 z-[-49] relative px-2 sm:px-0">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
-            <div className="lg:w-[28rem]" data-aos="fade-right">
-              <h1 className="text-5xl md:text-5xl font-semibold mb-4 ">
+            {/* <div className="lg:w-[28rem]" data-aos="fade-right"> */}
+            <div className="md:w-[28rem] lg:w-[38rem]" data-aos="fade-right">
+              <h1 className="text-5xl lg:text-7xl font-semibold mb-4 ">
                 Take Your <span className="text-blue-600 ">Portuguese</span> to
                 the next level with
                 <span className="text-red-600 "> Conversago</span>
