@@ -38,11 +38,14 @@ export default function Header() {
             // className="w-0 h-10 object-contain flex-shrink-0"
           />
         </Link>
-        <nav className="hidden md:flex space-x-4 items-center">
+        <nav className="hidden md:flex space-x-4 items-center ml-4">
           <Link href="#top" className="text-gray-600 hover:text-blue-600">
             Home
           </Link>
-          <Link href="#about" className="text-gray-600 hover:text-blue-600">
+          <Link
+            href="#about"
+            className="text-gray-600 hover:text-blue-600 whitespace-nowrap"
+          >
             About Us
           </Link>
           <Link href="#services" className="text-gray-600 hover:text-blue-600">
@@ -54,12 +57,15 @@ export default function Header() {
           <Link href="#blog" className="text-gray-600 hover:text-blue-600">
             Blog
           </Link>
-          <Link href="#contact" className="text-gray-600 hover:text-blue-600">
+          <Link
+            href="#contact"
+            className="text-gray-600 hover:text-blue-600 whitespace-nowrap"
+          >
             Message Us
           </Link>
           <Link
             href="#contact"
-            className="bg-customOrange hover:bg-customBlue-button text-white px-4 py-2 rounded-full "
+            className="bg-customOrange hover:bg-customBlue-button text-white px-4 py-2 rounded-full whitespace-nowrap"
           >
             Contact Now
           </Link>
