@@ -94,7 +94,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/4 bg-slate-500 flex justify-center  md:items-start items-center">
+        <div className="w-full md:w-1/4  flex justify-center  md:items-start items-center">
           <div>
             <Image
               src="/aboutus-logo.png"
