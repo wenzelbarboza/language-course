@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import Image from "next/image";
 
 export default function About() {
@@ -105,6 +106,9 @@ export default function About() {
             />
           </div>
         </div>
+      </div>
+      <div className="mb-10 sm:mb-60 lg:mb-0">
+        <Contact />
       </div>
     </main>
   );
