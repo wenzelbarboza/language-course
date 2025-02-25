@@ -17,9 +17,7 @@ export default function Home() {
       <Review />
       <PricingTable />
       <Faq />
-      <div className="">
-        <Contact />
-      </div>
+      <Contact />
     </main>
   );
 }
