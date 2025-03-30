@@ -3,11 +3,13 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const { language, setLanguage, t } = useLanguage();
 
   // Close menu if clicked outside of it
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-white  sticky top-0 z-50 px-2 sm:px-0 py-4">
+    <header className="bg-white  sticky top-0 z-50 px-2 sm:px-4 py-4">
       <div className="container mx-auto flex justify-between items-center py-4">
         <Link href="/" className="text-2xl font-bold">
           <Image
@@ -40,35 +42,63 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex space-x-4 items-center ml-4">
           <Link href="#top" className="text-gray-600 hover:text-blue-600">
-            Home
+            {t("header.home")}
           </Link>
           <Link
             href="/about"
             className="text-gray-600 hover:text-blue-600 whitespace-nowrap"
           >
-            About Us
+            {t("header.aboutUs")}
           </Link>
-          <Link href="#services" className="text-gray-600 hover:text-blue-600">
-            Courses
+          <Link
+            href="#courses"
+            className="text-gray-600 hover:text-blue-600"
+            onClick={(e) => {
+              e.preventDefault();
+              const coursesSection = document.getElementById("courses");
+              if (coursesSection) {
+                coursesSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            {t("header.courses")}
           </Link>
           <Link href="#portfolio" className="text-gray-600 hover:text-blue-600">
-            Testimonials
+            {t("header.testimonials")}
           </Link>
-          <Link href="#blog" className="text-gray-600 hover:text-blue-600">
-            Blog
-          </Link>
+          {/* <Link href="#blog" className="text-gray-600 hover:text-blue-600">
+            {t('header.blog')}
+          </Link> */}
           <Link
             href="#contact"
             className="text-gray-600 hover:text-blue-600 whitespace-nowrap"
           >
-            Message Us
+            {t("header.messageUs")}
           </Link>
           <Link
             href="#contact"
             className="bg-customOrange hover:bg-customBlue-button text-white px-4 py-2 rounded-full whitespace-nowrap"
           >
-            Contact Now
+            {t("header.contactNow")}
           </Link>
+          <div className="ml-4 flex items-center space-x-2">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`px-2 py-1 rounded ${
+                language === "en" ? "bg-blue-500 text-white" : "bg-gray-200"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage("zh")}
+              className={`px-2 py-1 rounded ${
+                language === "zh" ? "bg-blue-500 text-white" : "bg-gray-200"
+              }`}
+            >
+              中文
+            </button>
+          </div>
         </nav>
         <button
           ref={buttonRef}
@@ -90,23 +120,52 @@ export default function Header() {
       >
         <nav>
           {[
-            "Home",
-            "About Us",
-            "Services",
-            "Portfolio",
-            "Blog",
-            "Message Us",
-            "Contact Now",
+            { name: t("header.home"), href: "#top" },
+            { name: t("header.aboutUs"), href: "#aboutus" },
+            { name: t("header.courses"), href: "#courses", scroll: true },
+            { name: t("header.testimonials"), href: "#portfolio" },
+            // { name: t('header.blog'), href: "#blog" },
+            { name: t("header.messageUs"), href: "#contact" },
+            { name: t("header.contactNow"), href: "#contact" },
           ].map((item, index) => (
             <Link
               key={index}
-              href={`#${item.toLowerCase().replace(" ", "")}`}
+              href={item.href}
               className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => {
+                if (item.scroll && item.name === t("header.courses")) {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  const coursesSection = document.getElementById("courses");
+                  if (coursesSection) {
+                    coursesSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                } else {
+                  setIsMenuOpen(false);
+                }
+              }}
             >
-              {item}
+              {item.name}
             </Link>
           ))}
+          <div className="flex justify-center mt-4 space-x-2 px-4 py-2">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`px-2 py-1 rounded ${
+                language === "en" ? "bg-blue-500 text-white" : "bg-gray-200"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage("zh")}
+              className={`px-2 py-1 rounded ${
+                language === "zh" ? "bg-blue-500 text-white" : "bg-gray-200"
+              }`}
+            >
+              中文
+            </button>
+          </div>
         </nav>
       </div>
     </header>

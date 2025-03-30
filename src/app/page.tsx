@@ -6,16 +6,18 @@ import Faq from "@/components/Faq";
 import Why from "@/components/Why";
 import Review from "@/components/Review";
 import CardContainer from "@/components/CardContainer";
+import EnrollNow from "@/components/EnrollNow";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <Banner />
       <About />
       <Why />
       <CardContainer />
       <Review />
-      <PricingTable />
+      <EnrollNow />
+      {/* <PricingTable /> */}
       <Faq />
       <Contact />
     </main>

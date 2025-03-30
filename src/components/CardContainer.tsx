@@ -1,4 +1,5 @@
 "use client";
+import { useLanguage } from "@/context/LanguageContext";
 import Aos from "aos";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
@@ -71,6 +72,7 @@ const Card = ({ imgUrl, backText, backHeading }: Props) => {
 };
 
 const CardContainer = () => {
+  const { t, language } = useLanguage();
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
@@ -78,37 +80,43 @@ const CardContainer = () => {
   return (
     <div className="my-12 lg:mb-40" data-aos="fade-up">
       <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-12 text-center flex flex-col gap-4">
-        <p>
-          See What Our Learning
-          <span className="bg-text-gradient bg-clip-text text-transparent">
-            Offers
-          </span>
-        </p>
-        <p>
-          & What We <span className="text-red-600">Provide</span>
-        </p>
+        {language === "en" ? (
+          <>
+            <p>
+              See What Our Learning
+              <span className="bg-text-gradient bg-clip-text text-transparent">
+                Offers
+              </span>
+            </p>
+            <p>
+              & What We <span className="text-red-600">Provide</span>
+            </p>
+          </>
+        ) : (
+          t("services.title")
+        )}
       </h2>
       <StyledWrapper>
         <div className="cards">
           <Card
             imgUrl="trophy.png"
-            backHeading="A2-Level Fluency"
-            backText="Speak confidently and fluently in everyday situations."
+            backHeading={t("services.fluency")}
+            backText={t("services.fluencyDesc")}
           />
           <Card
             imgUrl="cap.png"
-            backHeading="Earn a Certificate"
-            backText="boost career and travel opportunities with recognized certificate"
+            backHeading={t("services.certificate")}
+            backText={t("services.certificateDesc")}
           />
           <Card
             imgUrl="collaboration.png"
-            backHeading="Speak with Confidence"
-            backText="Real-world dialogues for instant improvement."
+            backHeading={t("services.confidence")}
+            backText={t("services.confidenceDesc")}
           />
           <Card
             imgUrl="Positive.png"
-            backHeading="95% Success Rate"
-            backText="Join thousands of successful learners worldwide."
+            backHeading={t("services.successRate")}
+            backText={t("services.successRateDesc")}
           />
         </div>
       </StyledWrapper>

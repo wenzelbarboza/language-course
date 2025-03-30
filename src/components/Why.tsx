@@ -4,14 +4,17 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Why() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
-    <section className="container mx-auto sm:my-52 my-32 px-2 sm:px-0">
+    <section className="container mx-auto sm:my-52 my-32 px-2 sm:px-4">
       <div className="flex flex-col md:flex-row items-center">
         {/* Image Section */}
         <div className="md:w-4/12" data-aos="fade-right">
@@ -31,17 +34,13 @@ export default function Why() {
           data-aos="fade-left"
         >
           <h2 className="text-5xl font-medium mb-4 md:mb-9">
-            Why choose{" "}
+            {t("about.whyChoose")}{" "}
             <span className="bg-text-gradient bg-clip-text text-transparent">
-              portuges A2
+              {t("about.portugueseA2")}
             </span>
           </h2>
           <p className="mb-4 md:mb-9 text-lg  font-normal">
-            Our A2-Level Portuguese Course is designed for beginners who want to
-            master the fundamentals of the Portuguese language and speak with
-            confidence in just 30 days. With a structured curriculum, expert
-            guidance, and practical exercises, you'll gain real-world
-            communication skills and cultural insights.
+            {t("about.description")}
           </p>
 
           {/* Features List */}
@@ -54,30 +53,30 @@ export default function Why() {
                 src="/Forward.png"
                 width={20}
                 height={20}
-                alt="30-Day Intensive Learning"
+                alt={t("about.intensiveLearning")}
                 className="w-5 h-5 object-contain flex-shrink-0"
               />
-              30-Day Intensive Learning
+              {t("about.intensiveLearning")}
             </span>
             <span className="flex gap-2">
               <Image
                 src="/Laptop.png"
                 width={20}
                 height={20}
-                alt="100% ONLINE"
+                alt={t("about.online")}
                 className="w-5 h-5 object-contain flex-shrink-0"
               />
-              100% ONLINE
+              {t("about.online")}
             </span>
             <span className="flex gap-2 items-center">
               <Image
                 src="/Paper.png"
                 width={20}
                 height={20}
-                alt="NO EXAMS"
+                alt={t("about.noExams")}
                 className="w-5 h-5 object-contain flex-shrink-0"
               />
-              NO EXAMS
+              {t("about.noExams")}
             </span>
           </div>
         </div>

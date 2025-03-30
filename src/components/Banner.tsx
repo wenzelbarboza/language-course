@@ -2,8 +2,11 @@
 import Aos from "aos";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Banner() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
@@ -12,23 +15,25 @@ export default function Banner() {
       id="top"
       className="  bg-banner bg-cover bg-center bg-no-repeat z-[-50] relative "
     >
-      <div className="w-full h-screen items-end  bg-white bg-opacity-80 py-20 z-[-49] relative px-2 sm:px-0">
+      <div className="w-full h-screen items-end  bg-white bg-opacity-80 py-20 z-[-49] relative px-2 sm:px-4">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
             {/* <div className="lg:w-[28rem]" data-aos="fade-right"> */}
-            <div className="md:w-[28rem] lg:w-[38rem]" data-aos="fade-right">
+            <div
+              className="w-full md:w-[28rem] lg:w-[38rem]"
+              data-aos="fade-right"
+            >
               <h1 className="text-5xl lg:text-7xl font-semibold mb-4 ">
-                Take Your <span className="text-red-600 ">Portuguese</span> to
-                the next level with
+                {t("banner.title1")}{" "}
+                <span className="text-red-600 ">{t("banner.title2")}</span>{" "}
+                {t("banner.title3")}
                 <span className="bg-text-gradient bg-clip-text text-transparent">
                   {" "}
-                  Portuges A2
+                  {t("banner.title4")}
                 </span>
               </h1>
               <p className="text-l mb-6 opacity-80">
-                Experience expert-designed courses that combine practical
-                learning, cultural immersion, and real-world conversation skill
-                for your success
+                {t("banner.description")}
               </p>
             </div>
             {/* <form className="flex flex-col sm:flex-row gap-4">

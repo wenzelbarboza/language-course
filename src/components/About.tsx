@@ -2,34 +2,34 @@
 import Aos from "aos";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function About() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
 
   const services = [
     {
-      title: "Learn & Connect",
-      description:
-        "Language opens doors to new cultures. Start your journey today!",
+      title: t("about.learnConnect"),
+      description: t("about.learnConnectDesc"),
       icon: "/globe.svg?height=50&width=50",
     },
     {
-      title: "Fun & Easy Learning",
-      description:
-        "Interactive lessons make language learning simple and enjoyable",
+      title: t("about.funLearning"),
+      description: t("about.funLearningDesc"),
       icon: "/book.svg?height=50&width=50",
     },
     {
-      title: "Practice with Others",
-      description:
-        "Join a global community and improve with real conversations.",
+      title: t("about.practiceWithOthers"),
+      description: t("about.practiceWithOthersDesc"),
       icon: "/handshake.svg?height=50&width=50",
     },
     {
-      title: "Start Now",
-      description: "Begin your language adventure and reach fluency faster!",
+      title: t("about.startNow"),
+      description: t("about.startNowDesc"),
       icon: "/rocket.svg?height=45&width=45",
     },
   ];
@@ -37,7 +37,7 @@ export default function About() {
   return (
     // <section id="about" className="about-section relative py-20 ">
     <section id="about" className="lg:about-section relative  ">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center px-2 sm:px-0">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center px-2 sm:px-4">
         <div className="lg:w-1/3 mb-10 lg:mb-0 " data-aos="fade-right">
           <Image
             src="/about-img.png?height=500&width=400"

@@ -31,7 +31,20 @@
     height: 875px; 
     z-index: -1; /* Ensure it's behind the content */
   }
-
+  .our-courses::after {
+    content: '';
+    position: absolute;
+    top: -400;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/contact-bg.png');
+    background-position: center;
+    background-size: cover;
+    /* for less than lg */
+    height: 800px; 
+    z-index: -1; /* Ensure it's behind the content */
+  }
 
   @media (min-width: 1024px) { /* lg breakpoint in Tailwind */
     .contact-section::after {

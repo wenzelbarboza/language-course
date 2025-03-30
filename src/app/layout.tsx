@@ -5,6 +5,7 @@ import { Poppins, Merriweather } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type React from "react"; // Added import for React
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={merriweather.className}>
-        <Header />
-        {children}
-        <Footer />
+        <LanguageProvider>
+          <Header />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
