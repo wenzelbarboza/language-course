@@ -16,35 +16,34 @@ const Pricing = () => {
     <>
       {/* our courses */}
       <section
-        className="container mx-auto py-20  px-4 our-courses bg-customOrange sm:bg-transparent"
+        className="w-full mb-8 py-20  px-4 our-courses bg-customOrange sm:bg-transparent"
         data-aos="fade-down"
       >
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold bg-text-gradient bg-clip-text text-transparent">
-            {t("courses.title")}
-          </h1>
-        </div>
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="md:w-2/3 text-white">
-            <p className="mb-4 text-lg">{t("courses.description")}</p>
-            <p className="mb-6 text-lg">{t("courses.description2")}</p>
+        <div className="container mx-auto">
+          <div className="  mx-auto">
+            <h1 className="text-4xl font-bold bg-text-gradient bg-clip-text text-transparent">
+              {t("courses.title")}
+            </h1>
           </div>
-          <div className="md:w-1/3 flex items-center justify-center">
-            <button
-              onClick={scrollToContact}
-              className="bg-customBlue-button hover:bg-blue-500 text-white text-xl font-medium px-10 py-4 rounded-full transition duration-300 w-full md:w-auto"
-            >
-              {t("header.enrollNow")}
-            </button>
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="md:w-2/3 text-white">
+              <p className="mb-4 text-lg">{t("courses.description")}</p>
+              <p className="mb-6 text-lg">{t("courses.description2")}</p>
+            </div>
+            <div className="md:w-1/3 flex items-center justify-center">
+              <button
+                onClick={scrollToContact}
+                className="bg-customBlue-button hover:bg-blue-500 text-white text-xl font-medium px-10 py-4 rounded-full transition duration-300 w-full md:w-auto"
+              >
+                {t("header.enrollNow")}
+              </button>
+            </div>
           </div>
         </div>
       </section>
       {/* what you will learn section*/}
-      <section
-        className="container mx-auto py-20 bg-gray-50"
-        data-aos="fade-up"
-      >
-        <div className="mb-12 text-center">
+      <section className="container mx-auto py-24 " data-aos="fade-up px-4">
+        <div className=" mb-12 text-center">
           <h2 className="text-4xl font-bold text-[#00AEEF] mb-4">
             {t("courses.whatYouLearn")}
           </h2>
@@ -104,8 +103,8 @@ const Pricing = () => {
         </div>
       </section>
       {/* choose your learning plan section */}
-      <section className="container mx-auto py-20 px-4" data-aos="fade-up">
-        <div className="mb-12 text-center">
+      <section className=" container mx-auto py-20 px-4" data-aos="fade-up">
+        <div className="  px-4 mb-12 text-center">
           <h2 className="text-4xl font-bold mb-4">{t("courses.choosePlan")}</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

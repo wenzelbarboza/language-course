@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <main className="container mx-auto">
-      <div className="w-full h-full flex md:flex-row flex-col-reverse px-2 gap-4 md:gap-2  my-10 mb-32">
+    <main className=" mx-auto">
+      <div className="container mx-auto w-full h-full flex md:flex-row flex-col-reverse px-2 gap-4 md:gap-2  my-10 mb-32">
         <div className="w-full md:w-3/4">
           <h1 className="text-3xl font-bold mb-4 md:mb-8 bg-text-gradient bg-clip-text text-transparent">
             About us
