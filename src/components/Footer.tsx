@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -49,7 +50,9 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <p className="text-sm  font-semibold">{t("footer.terms")}</p>
+          <p className="text-sm  font-semibold">
+            <Link href={"/privacy-policy"}>{t("footer.terms")}</Link>
+          </p>
         </div>
         <div>
           <div className="mb-4 hidden sm:block">

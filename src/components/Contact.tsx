@@ -53,6 +53,7 @@ export default function Contact() {
       setWarnings(false);
     }
 
+    setIsSubmitting(true);
     try {
       // Send the POST request to the API
       setIsSubmitting(true);
@@ -69,7 +70,7 @@ export default function Contact() {
       if (response.ok) {
         setSubmitStatus({
           type: "success",
-          message: "Data uploaded successfully",
+          message: "Data submitted successfully",
         });
         setFormData({
           name: "",
@@ -168,12 +169,28 @@ export default function Contact() {
                   setFormData({ ...formData, message: e.target.value })
                 }
               ></textarea>
+              {isSubmitting && (
+                <div className="text-center text-blue-700">
+                  submitting the data...
+                </div>
+              )}
               <button
                 onClick={handleSubmit}
                 className="w-full bg-customBlue-button text-white px-6 py-3 rounded-3xl hover:bg-customOrange transition duration-300"
+                disabled={isSubmitting}
               >
                 {t("header.messageUs")}
               </button>
+              {submitStatus.type === "success" && (
+                <div className="text-center text-green-700 mt-4">
+                  {submitStatus.message}
+                </div>
+              )}
+              {submitStatus.type === "error" && (
+                <div className="text-center text-red-700 mt-4">
+                  {submitStatus.message}
+                </div>
+              )}
             </form>
           </div>
         </div>

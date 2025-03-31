@@ -2,11 +2,16 @@
 
 import Contact from "@/components/Contact";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Pricing = () => {
   const { t } = useLanguage();
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       {/* our courses */}
@@ -25,7 +30,10 @@ const Pricing = () => {
             <p className="mb-6 text-lg">{t("courses.description2")}</p>
           </div>
           <div className="md:w-1/3 flex items-center justify-center">
-            <button className="bg-customBlue-button hover:bg-blue-500 text-white text-xl font-medium px-10 py-4 rounded-full transition duration-300 w-full md:w-auto">
+            <button
+              onClick={scrollToContact}
+              className="bg-customBlue-button hover:bg-blue-500 text-white text-xl font-medium px-10 py-4 rounded-full transition duration-300 w-full md:w-auto"
+            >
               {t("header.enrollNow")}
             </button>
           </div>
@@ -148,7 +156,10 @@ const Pricing = () => {
                   € 8000 {t("courses.person")}
                 </p>
               </div>
-              <button className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300">
+              <button
+                onClick={scrollToContact}
+                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
+              >
                 {t("courses.enrollNow")}
               </button>
             </div>
@@ -201,7 +212,10 @@ const Pricing = () => {
                   € 6800 {t("courses.person")}
                 </p>
               </div>
-              <button className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300">
+              <button
+                onClick={scrollToContact}
+                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
+              >
                 {t("courses.enrollNow")}
               </button>
             </div>
@@ -254,14 +268,19 @@ const Pricing = () => {
                   € 2500 {t("courses.person")}
                 </p>
               </div>
-              <button className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300">
+              <button
+                onClick={scrollToContact}
+                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
+              >
                 {t("courses.enrollNow")}
               </button>
             </div>
           </div>
         </div>
       </section>
-      <Contact />
+      <div ref={contactRef}>
+        <Contact />
+      </div>
     </>
   );
 };

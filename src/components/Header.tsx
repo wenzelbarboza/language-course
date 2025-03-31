@@ -41,7 +41,7 @@ export default function Header() {
           />
         </Link>
         <nav className="hidden md:flex space-x-4 items-center ml-4">
-          <Link href="#top" className="text-gray-600 hover:text-blue-600">
+          <Link href="/" className="text-gray-600 hover:text-blue-600">
             {t("header.home")}
           </Link>
           <Link
