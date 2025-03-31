@@ -64,7 +64,6 @@ export default function Footer() {
               // className="w-5 h-5 object-contain flex-shrink-0"
             />
           </div>
-          <p className="text-sm  font-semibold">YOUR SLOGAN HERE</p>
           <ul className="flex gap-1 flex-col items-center sm:items-start">
             <li className="text-xs font-light">{t("footer.home")}</li>
             <li className="text-xs font-light">{t("footer.about")}</li>

@@ -51,15 +51,15 @@ export default function Header() {
             {t("header.aboutUs")}
           </Link>
           <Link
-            href="#courses"
+            href="/pricing"
             className="text-gray-600 hover:text-blue-600"
-            onClick={(e) => {
-              e.preventDefault();
-              const coursesSection = document.getElementById("courses");
-              if (coursesSection) {
-                coursesSection.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            // onClick={(e) => {
+            //   e.preventDefault();
+            //   const coursesSection = document.getElementById("courses");
+            //   if (coursesSection) {
+            //     coursesSection.scrollIntoView({ behavior: "smooth" });
+            //   }
+            // }}
           >
             {t("header.courses")}
           </Link>
@@ -76,7 +76,7 @@ export default function Header() {
             {t("header.messageUs")}
           </Link>
           <Link
-            href="#contact"
+            href="/pricing"
             className="bg-customOrange hover:bg-customBlue-button text-white px-4 py-2 rounded-full whitespace-nowrap"
           >
             {t("header.contactNow")}
@@ -126,7 +126,7 @@ export default function Header() {
             { name: t("header.testimonials"), href: "#portfolio" },
             // { name: t('header.blog'), href: "#blog" },
             { name: t("header.messageUs"), href: "#contact" },
-            { name: t("header.contactNow"), href: "#contact" },
+            { name: t("header.contactNow"), href: "/pricing" },
           ].map((item, index) => (
             <Link
               key={index}
