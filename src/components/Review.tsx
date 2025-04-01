@@ -24,19 +24,19 @@ export default function Review() {
   // Use testimonials from language files
   const testimonials = [
     {
-      rating: 4.7,
+      name: t("testimonials.student1.name"),
       review: t("testimonials.student1"),
     },
     {
-      rating: 4.9,
+      name: t("testimonials.student2.name"),
       review: t("testimonials.student2"),
     },
     {
-      rating: 4.9,
+      name: t("testimonials.student3.name"),
       review: t("testimonials.student3"),
     },
     {
-      rating: 4.9,
+      name: t("testimonials.student4.name"),
       review: t("testimonials.student4"),
     },
   ];
@@ -94,7 +94,7 @@ export default function Review() {
                         <path d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699..." />
                       </svg>
                       <span className="text-base font-semibold text-indigo-600">
-                        {item.rating}
+                        {item.name}
                       </span>
                     </div>
 

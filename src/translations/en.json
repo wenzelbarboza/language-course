@@ -94,9 +94,16 @@
   "footer.copyright": "© Copyright 2025 Portuguese A2. All Rights Reserved.",
   
 "testimonials.heading": "What our students say",
+"testimonials.student1.name":"Mrs. Liu",
   "testimonials.student1": "I was nervous about the CIPLE exam, but PortugueseA2.com made it easy and efficient. Their lessons covered everything I needed. Thanks to them, I passed the 150 hours requirement in no time!",
+
+"testimonials.student2.name":"Mr. Chen",
   "testimonials.student2": "I needed to pass the ciple exam for my residency application, and PortugueseA2.com was a lifesaver. The course covered everything in a clear and practical way. Thanks to them i'm completing my residency application.",
+
+"testimonials.student3.name":"Ms. Zhang",
   "testimonials.student3": "I struggled to find the right resources for the CIPLE exam until I discovered PortugueseA2.com. Their lessons were well-organized and covered everything I needed. Meeting the 150-hour requirement was a breeze, and I passed without any problems!",
+
+"testimonials.student4.name":"Mr. Roberts",
   "testimonials.student4": "I was overwhelmed by the idea of preparing for the CIPLE exam, but PortugueseA2.com made it so manageable. The lessons were structured and easy to follow, and I felt confident after completing the 150 hours. I couldn't have done it without their support!",
 
 
@@ -120,5 +127,14 @@
   "faq.question8": "How long does it take to complete the A2 course?",
   "faq.answer8": "We offer three options: • Intensive Course: 30 days, 5 hours of study per day • Intermediate Course: 75 days, 2 hours of study per day • Regular Course: 120 days, 1 hour of study per day",
   "faq.question9": "How long does it take to receive the A2 certificate after completing the course?",
-  "faq.answer9": "Within 2 weeks, we will send a scanned copy to your registered email, and the original certificate will be mailed to a designated address in Portugal."
+  "faq.answer9": "Within 2 weeks, we will send a scanned copy to your registered email, and the original certificate will be mailed to a designated address in Portugal.",
+
+  "aboutUs.title": "About Us",
+  "aboutUs.introduction": "Português A2 is a brand created by the RPB group. RPB is a consulting and professional training company that operates based on a policy where values such as integrity, accountability, transparency, continuous improvement, and ethics are considered fundamental. In turn, the provision of services is based on high standards of quality and continuous improvement, aiming to meet the needs and expectations of our clients and the market, always ensuring the highest technical and pedagogical quality.",
+  "aboutUs.certifications.title": "In terms of Professional Training, RPB Consultores holds the following approvals/certifications:",
+  "aboutUs.certifications.iefp": "Certification by the Institute of Employment and Vocational Training (IEFP)",
+  "aboutUs.certifications.dgadr": "Certification by the Directorate-General for Agriculture and Rural Development (DGADR)",
+  "aboutUs.certifications.act": "Certification by the Authority for Working Conditions (ACT)",
+  "aboutUs.certifications.fnacc": "Certification by the National Federation of Associations of Meat Traders (FNACC)"
+
 }

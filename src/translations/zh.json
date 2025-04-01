@@ -95,9 +95,13 @@
   "footer.copyright": "© 2025 Portuguese A2 版权所有。保留所有权利。",
   
 "testimonials.heading": "学员怎么说",
+"testimonials.student1.name":"刘太太",
   "testimonials.student1": "我原本对 CIPLE 考试感到紧张，但 PortugueseA2.com 让学习变得简单高效。他们的课程涵盖了我需要的所有内容。多亏了他们，我很快就完成了150小时的学习要求！",
+"testimonials.student2.name":"陈先生",
   "testimonials.student2": "为了申请居留，我必须通过 CIPLE 考试，而 PortugueseA2.com 简直是我的救星。课程内容清晰又实用。感谢他们，我现在正在顺利完成居留申请。",
+"testimonials.student3.name":"张女士",
   "testimonials.student3": "在发现 PortugueseA2.com 之前，我一直找不到合适的 CIPLE 考试资源。他们的课程结构清晰，内容全面。完成150小时的要求轻而易举，我也顺利通过了考试！",
+"testimonials.student4.name":"罗伯茨先生",
   "testimonials.student4": "我一开始对准备 CIPLE 考试感到压力山大，但 PortugueseA2.com 让这一切变得轻松可控。课程结构清晰，容易跟上，在完成了 150 小时后，我信心十足。如果没有他们的支持，我根本做不到！",
 
   "faq.title": "常见问题",
@@ -118,5 +122,13 @@
   "faq.question8": "整个 A2 课程读完需要多久？",
   "faq.answer8": "有以下三种选项： -速成班: 30 天，每天 5 小时的学习时间 -进阶班：75 天，每天 2 小时的学习时间 -普通班：120 天，每天 1 小时的学习时间",
   "faq.question9": "课程完成后多久可以拿到 A2 证书？",
-  "faq.answer9": "2 周内，我们会将扫描件发送至您登记注册邮箱，并将原件寄到您指定的一个葡萄牙地址。"
+  "faq.answer9": "2 周内，我们会将扫描件发送至您登记注册邮箱，并将原件寄到您指定的一个葡萄牙地址。",
+
+  "aboutUs.title": "关于我们",
+  "aboutUs.introduction": "葡萄牙语A2是RPB集团创建的品牌。RPB是一家咨询和职业培训公司，基于诚信、责任、透明度、持续改进和伦理等核心价值观运营。提供服务的同时，遵循高质量和持续改进的标准，旨在满足客户和市场的需求与期望，始终确保技术和教学质量达到最高标准。",
+  "aboutUs.certifications.title": "在职业培训方面，RPB咨询公司持有以下认证/批准:",
+  "aboutUs.certifications.iefp": "由就业与职业培训研究所（IEFP）认证",
+  "aboutUs.certifications.dgadr": "由农业和农村发展总局（DGADR）认证",
+  "aboutUs.certifications.act": "由劳动条件局（ACT）认证",
+  "aboutUs.certifications.fnacc": "由葡萄牙肉类交易商协会（FNACC）认证"
 }
