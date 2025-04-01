@@ -56,9 +56,17 @@
   "courses.superQ": "速成班",
   "courses.superQDesc": "每班最多5名学员的快速葡萄牙语学习课程",
   "courses.quick": "进阶班",
-  "courses.quickDesc": "每班最多8名学员的互动小组课程",
+  "courses.quickDesc": "互动小组课程，每班最多5到8名学生",
   "courses.standard": "普通班",
   "courses.standardDesc": "每班最多10名学员的互动小组课程",
+
+  "courses.quickSm": "快速 - 小班",
+  "courses.quickSmDesc": "通过最多3人的小班级获得更个性化的学习体验",
+  "courses.quickFm": "快速 - 家庭",
+  "courses.quickFmDesc": "为您的家庭提供专属的葡萄牙语学习套餐",
+
+
+
   "courses.days": "天",
   "courses.hours": "小时/天",
   "courses.person": "/人",

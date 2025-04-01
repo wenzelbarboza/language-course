@@ -163,7 +163,6 @@ const Pricing = () => {
               </button>
             </div>
           </div>
-
           {/* Quick Plan */}
           <div className="border border-blue-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
             <div className="p-6">
@@ -208,7 +207,7 @@ const Pricing = () => {
               </div>
               <div className="text-center mb-6">
                 <p className="text-3xl font-bold text-[#00AEEF]">
-                  € 6800 {t("courses.person")}
+                  € 5000 {t("courses.person")}
                 </p>
               </div>
               <button
@@ -219,9 +218,8 @@ const Pricing = () => {
               </button>
             </div>
           </div>
-
           {/* Standard Plan */}
-          <div className="border border-green-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div className="border border-blue-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
             <div className="p-6">
               <div className="mb-6 text-center">
                 <Image
@@ -265,6 +263,117 @@ const Pricing = () => {
               <div className="text-center mb-6">
                 <p className="text-3xl font-bold text-[#00AEEF]">
                   € 2500 {t("courses.person")}
+                </p>
+              </div>
+              <button
+                onClick={scrollToContact}
+                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
+              >
+                {t("courses.enrollNow")}
+              </button>
+            </div>
+          </div>
+          {/* Quick small plan */}
+          <div className="border border-blue-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div className="p-6">
+              <div className="mb-6 text-center">
+                <Image
+                  src="/Quick.png"
+                  alt="Quick Plan"
+                  width={250}
+                  height={150}
+                  className="mx-auto h-[150px] w-full object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-3xl font-bold text-[#00AEEF] mb-2">
+                  {t("courses.quickSm")}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {t("courses.quickSmDesc")}
+                </p>
+              </div>
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                  <img
+                    src="/calendar.png"
+                    alt="Calendar"
+                    className="h-5 w-5 text-gray-600"
+                  />
+                </div>
+                <span className="text-lg font-medium">
+                  75 {t("courses.days")}
+                </span>
+              </div>
+              <div className="flex items-center mb-6">
+                <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                  <img
+                    src="/Time Machine.png"
+                    alt="Calendar"
+                    className="h-5 w-5 text-gray-600"
+                  />
+                </div>
+                <span className="text-lg font-medium">
+                  2 {t("courses.hours")}
+                </span>
+              </div>
+              <div className="text-center mb-6">
+                <p className="text-3xl font-bold text-[#00AEEF]">
+                  € 8000 {t("courses.person")}
+                </p>
+              </div>
+              <button
+                onClick={scrollToContact}
+                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
+              >
+                {t("courses.enrollNow")}
+              </button>
+            </div>
+          </div>
+
+          {/* Quick - family Plan */}
+          <div className="border border-blue-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div className="p-6">
+              <div className="mb-6 text-center">
+                <Image
+                  src="/Quick.png"
+                  alt="Quick Plan"
+                  width={250}
+                  height={150}
+                  className="mx-auto h-[150px] w-full object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-3xl font-bold text-[#00AEEF] mb-2">
+                  {t("courses.quickFm")}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {t("courses.quickFmDesc")}
+                </p>
+              </div>
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                  <img
+                    src="/calendar.png"
+                    alt="Calendar"
+                    className="h-5 w-5 text-gray-600"
+                  />
+                </div>
+                <span className="text-lg font-medium">
+                  75 {t("courses.days")}
+                </span>
+              </div>
+              <div className="flex items-center mb-6">
+                <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                  <img
+                    src="/Time Machine.png"
+                    alt="Calendar"
+                    className="h-5 w-5 text-gray-600"
+                  />
+                </div>
+                <span className="text-lg font-medium">
+                  2 {t("courses.hours")}
+                </span>
+              </div>
+              <div className="text-center mb-6">
+                <p className="text-3xl font-bold text-[#00AEEF]">
+                  € 6800 {t("courses.person")}
                 </p>
               </div>
               <button

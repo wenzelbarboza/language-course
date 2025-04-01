@@ -56,9 +56,16 @@
   "courses.superQ": "Super Q",
   "courses.superQDesc": "Fast-track your Portuguese learning with up-to 5 members per class",
   "courses.quick": "Quick",
-  "courses.quickDesc": "Interactive group sessions with maximum 8 students per class",
+  "courses.quickDesc": "Interactive group sessions with 5 to 8 maximum students per class",
   "courses.standard": "Standard",
   "courses.standardDesc": "Interactive group sessions with maximum 10 Members per class",
+
+  "courses.quickSm": "Quick - small",
+  "courses.quickSmDesc": "Get more personalized with a small group up to 3 members per class",
+  "courses.quickFm": "Quick - Family",
+  "courses.quickFmDesc": "Get a package just for your family to learn Portuguese",
+
+
   "courses.days": "Days",
   "courses.hours": "Hours / day",
   "courses.person": "/ Person",
