@@ -12,9 +12,12 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Portuges A2",
+  title: "Portuguese A2",
   description: "Poruguese Language Learning Platform",
   generator: "v0.dev",
+  icons: {
+    icon: "/fav_ic.png",
+  },
 };
 
 export default function RootLayout({
