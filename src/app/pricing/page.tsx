@@ -137,7 +137,7 @@ const Pricing = () => {
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/calendar.png"
+                    src="/Calendar.png"
                     alt="Calendar"
                     width={20}
                     height={20}
@@ -196,7 +196,7 @@ const Pricing = () => {
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/calendar.png"
+                    src="/Calendar.png"
                     alt="Calendar"
                     width={20}
                     height={20}
@@ -255,7 +255,7 @@ const Pricing = () => {
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/calendar.png"
+                    src="/Calendar.png"
                     alt="Calendar"
                     width={20}
                     height={20}
@@ -314,7 +314,7 @@ const Pricing = () => {
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/calendar.png"
+                    src="/Calendar.png"
                     alt="Calendar"
                     width={20}
                     height={20}
@@ -374,7 +374,7 @@ const Pricing = () => {
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/calendar.png"
+                    src="/Calendar.png"
                     alt="Calendar"
                     width={20}
                     height={20}
