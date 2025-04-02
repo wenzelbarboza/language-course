@@ -16,7 +16,6 @@ export async function POST(request: Request) {
     // Parse the request body
     const body = await request.json();
     const { name, surname, email, message } = body as ContactFormData;
-    console.log("body: ", body);
 
     //test
     // return NextResponse.json({
