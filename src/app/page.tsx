@@ -1,7 +1,6 @@
 import Banner from "@/components/Banner";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import PricingTable from "@/components/pricing";
 import Faq from "@/components/Faq";
 import Why from "@/components/Why";
 import Review from "@/components/Review";

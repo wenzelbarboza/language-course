@@ -15,7 +15,8 @@ const Card = ({ imgUrl, backText, backHeading }: Props) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (window.innerWidth <= 768 && cardRef.current) {
+    const cardElement = cardRef.current;
+    if (window.innerWidth <= 768 && cardElement) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -36,11 +37,11 @@ const Card = ({ imgUrl, backText, backHeading }: Props) => {
         }
       );
 
-      observer.observe(cardRef.current);
+      observer.observe(cardElement);
 
       return () => {
-        if (cardRef.current) {
-          observer.unobserve(cardRef.current);
+        if (cardElement) {
+          observer.unobserve(cardElement);
         }
       };
     }
@@ -79,47 +80,49 @@ const CardContainer = () => {
 
   return (
     <div className="my-12 lg:mb-40" data-aos="fade-up">
-      <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-12 text-center flex flex-col gap-4">
-        {language === "en" ? (
-          <>
-            <p>
-              See What Our Learning
-              <span className="bg-text-gradient bg-clip-text text-transparent">
-                Offers
-              </span>
-            </p>
-            <p>
-              & What We <span className="text-red-600">Provide</span>
-            </p>
-          </>
-        ) : (
-          t("services.title")
-        )}
-      </h2>
-      <StyledWrapper>
-        <div className="cards">
-          <Card
-            imgUrl="trophy.png"
-            backHeading={t("services.fluency")}
-            backText={t("services.fluencyDesc")}
-          />
-          <Card
-            imgUrl="cap.png"
-            backHeading={t("services.certificate")}
-            backText={t("services.certificateDesc")}
-          />
-          <Card
-            imgUrl="collaboration.png"
-            backHeading={t("services.confidence")}
-            backText={t("services.confidenceDesc")}
-          />
-          <Card
-            imgUrl="Positive.png"
-            backHeading={t("services.successRate")}
-            backText={t("services.successRateDesc")}
-          />
-        </div>
-      </StyledWrapper>
+      <div className="container mx-auto">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-12 text-center flex flex-col gap-4">
+          {language === "en" ? (
+            <>
+              <p>
+                See What Our Learning
+                <span className="bg-text-gradient bg-clip-text text-transparent">
+                  Offers
+                </span>
+              </p>
+              <p>
+                & What We <span className="text-red-600">Provide</span>
+              </p>
+            </>
+          ) : (
+            t("services.title")
+          )}
+        </h2>
+        <StyledWrapper>
+          <div className="cards">
+            <Card
+              imgUrl="Trophy.png"
+              backHeading={t("services.fluency")}
+              backText={t("services.fluencyDesc")}
+            />
+            <Card
+              imgUrl="Cap.png"
+              backHeading={t("services.certificate")}
+              backText={t("services.certificateDesc")}
+            />
+            <Card
+              imgUrl="Collaboration.png"
+              backHeading={t("services.confidence")}
+              backText={t("services.confidenceDesc")}
+            />
+            <Card
+              imgUrl="Positive.png"
+              backHeading={t("services.successRate")}
+              backText={t("services.successRateDesc")}
+            />
+          </div>
+        </StyledWrapper>
+      </div>
     </div>
   );
 };

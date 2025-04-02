@@ -51,10 +51,12 @@ const Pricing = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Card 1 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/skills-speaking.png"
               alt="Speaking Skills Icon"
-              className="w-16 h-16 mb-4 object-contain"
+              width={64}
+              height={64}
+              className="mb-4 object-contain"
             />
             <h3 className="text-xl font-semibold mb-2">
               {t("courses.speaking")}
@@ -64,10 +66,12 @@ const Pricing = () => {
 
           {/* Card 2 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/skills-writing.png"
               alt="Grammar Icon"
-              className="w-16 h-16 mb-4 object-contain"
+              width={64}
+              height={64}
+              className="mb-4 object-contain"
             />
             <h3 className="text-xl font-semibold mb-2">
               {t("courses.grammar")}
@@ -77,10 +81,12 @@ const Pricing = () => {
 
           {/* Card 3 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/skills-listning.png"
               alt="Native Speakers Icon"
-              className="w-16 h-16 mb-4 object-contain"
+              width={64}
+              height={64}
+              className="mb-4 object-contain"
             />
             <h3 className="text-xl font-semibold mb-2">
               {t("courses.listening")}
@@ -90,10 +96,12 @@ const Pricing = () => {
 
           {/* Card 4 */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src="/skills-writing.png"
               alt="Written Communication Icon"
-              className="w-16 h-16 mb-4 object-contain"
+              width={64}
+              height={64}
+              className="mb-4 object-contain"
             />
             <h3 className="text-xl font-semibold mb-2">
               {t("courses.writing")}
@@ -128,10 +136,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/calendar.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -140,10 +150,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/Time Machine.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -183,10 +195,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/calendar.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -195,10 +209,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/Time Machine.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -238,10 +254,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/calendar.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -250,10 +268,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/Time Machine.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -293,10 +313,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/calendar.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -305,10 +327,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/Time Machine.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -349,10 +373,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-4">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/calendar.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">
@@ -361,10 +387,12 @@ const Pricing = () => {
               </div>
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                  <img
+                  <Image
                     src="/Time Machine.png"
                     alt="Calendar"
-                    className="h-5 w-5 text-gray-600"
+                    width={20}
+                    height={20}
+                    className="text-gray-600"
                   />
                 </div>
                 <span className="text-lg font-medium">

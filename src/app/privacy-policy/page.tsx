@@ -56,7 +56,7 @@ const page = () => {
                     processing Personal Data.
                   </li>
                   <li>
-                    If you believe that Vela Chinesa's Privacy Notices are
+                    If you believe that Vela Chinesa&apos;s Privacy Notices are
                     incorrect.
                   </li>
                   <li>
@@ -88,8 +88,8 @@ const page = () => {
                     purposes other than those for which it was collected.
                   </li>
                   <li>
-                    If you are planning to fulfill any activities that involve
-                    automated processes, including contour generation or
+                    If you&apos;re planning to fulfill any activities that
+                    involve automated processes, including contour generation or
                     automated solution achievement.
                   </li>
                   <li>
@@ -438,7 +438,7 @@ const page = () => {
                 <ul className="list-disc list-inside text-gray-700 leading-relaxed">
                   <li>Revoke authorization for data processing at any time.</li>
                   <li>
-                    Obtain certain data regarding the Data Processor's
+                    Obtain certain data regarding the Data Processor&apos;s
                     functions.
                   </li>
                   <li>
@@ -487,7 +487,7 @@ const page = () => {
                   >
                     geral@velachinesa.com
                   </a>
-                  , using the theme 'Chinese Candle GDPR Request'.
+                  , using the theme &apos;Chinese Candle GDPR Request&apos;.
                 </p>
               </section>
 

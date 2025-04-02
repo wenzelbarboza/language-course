@@ -63,9 +63,9 @@ export default function Header() {
           >
             {t("header.courses")}
           </Link>
-          <Link href="#portfolio" className="text-gray-600 hover:text-blue-600">
+          {/* <Link href="#portfolio" className="text-gray-600 hover:text-blue-600">
             {t("header.testimonials")}
-          </Link>
+          </Link> */}
           {/* <Link href="#blog" className="text-gray-600 hover:text-blue-600">
             {t('header.blog')}
           </Link> */}
@@ -79,7 +79,7 @@ export default function Header() {
             href="/pricing"
             className="bg-customOrange hover:bg-customBlue-button text-white px-4 py-2 rounded-full whitespace-nowrap"
           >
-            {t("header.contactNow")}
+            {t("header.enrollNow")}
           </Link>
           <div className="ml-4 flex items-center space-x-2">
             <button
@@ -116,17 +116,17 @@ export default function Header() {
           isMenuOpen
             ? "scale-y-100 opacity-100"
             : "scale-y-0 opacity-0 pointer-events-none"
-        } fixed top-24 left-0 w-full bg-white py-2 shadow-md z-50`}
+        } fixed top-20 left-0 w-full bg-white py-2 shadow-md z-50`}
       >
         <nav>
           {[
             { name: t("header.home"), href: "#top" },
             { name: t("header.aboutUs"), href: "#aboutus" },
             { name: t("header.courses"), href: "#courses", scroll: true },
-            { name: t("header.testimonials"), href: "#portfolio" },
+            // { name: t("header.testimonials"), href: "#portfolio" },
             // { name: t('header.blog'), href: "#blog" },
             { name: t("header.messageUs"), href: "#contact" },
-            { name: t("header.contactNow"), href: "/pricing" },
+            { name: t("header.enrollNow"), href: "/pricing" },
           ].map((item, index) => (
             <Link
               key={index}

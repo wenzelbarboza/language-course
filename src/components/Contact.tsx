@@ -4,7 +4,7 @@ import Aos from "aos";
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import { useLanguage } from "@/context/LanguageContext";
-import { is } from "drizzle-orm";
+// import { is } from "drizzle-orm";
 
 export default function Contact() {
   // Form state
@@ -65,7 +65,7 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      // const data = await response.json();
 
       if (response.ok) {
         setSubmitStatus({

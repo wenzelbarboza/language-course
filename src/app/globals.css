@@ -7,7 +7,7 @@
   .about-section::after {
     content: '';
     position: absolute;
-    top: -95;
+    top: -95px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -20,7 +20,7 @@
   .contact-section::after {
     content: '';
     position: absolute;
-    top: -55;
+    top: -55px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -34,7 +34,7 @@
   .our-courses::after {
     content: '';
     position: absolute;
-    top: -400;
+    top: -400px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -49,7 +49,7 @@
   @media (min-width: 1024px) { /* lg breakpoint in Tailwind */
     .contact-section::after {
       height: 700px;
-      top: -20;
+      top: -20px;
     }
   }
 
