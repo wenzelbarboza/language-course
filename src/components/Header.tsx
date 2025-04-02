@@ -120,9 +120,10 @@ export default function Header() {
       >
         <nav>
           {[
-            { name: t("header.home"), href: "#top" },
-            { name: t("header.aboutUs"), href: "#aboutus" },
-            { name: t("header.courses"), href: "#courses", scroll: true },
+            { name: t("header.home"), href: "/" },
+            { name: t("header.aboutUs"), href: "/about" },
+            // { name: t("header.courses"), href: "/pricing", scroll: true },
+            { name: t("header.courses"), href: "/pricing" },
             // { name: t("header.testimonials"), href: "#portfolio" },
             // { name: t('header.blog'), href: "#blog" },
             { name: t("header.messageUs"), href: "#contact" },
@@ -133,16 +134,16 @@ export default function Header() {
               href={item.href}
               className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
               onClick={(e) => {
-                if (item.scroll && item.name === t("header.courses")) {
-                  e.preventDefault();
-                  setIsMenuOpen(false);
-                  const coursesSection = document.getElementById("courses");
-                  if (coursesSection) {
-                    coursesSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                } else {
-                  setIsMenuOpen(false);
-                }
+                // if (item.scroll && item.name === t("header.courses")) {
+                //   e.preventDefault();
+                //   setIsMenuOpen(false);
+                //   const coursesSection = document.getElementById("courses");
+                //   if (coursesSection) {
+                //     coursesSection.scrollIntoView({ behavior: "smooth" });
+                //   }
+                // } else {
+                setIsMenuOpen(false);
+                // }
               }}
             >
               {item.name}

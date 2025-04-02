@@ -16,12 +16,12 @@ const Pricing = () => {
     <>
       {/* our courses */}
       <section
-        className="w-full mb-8 py-20  px-4 our-courses bg-customOrange sm:bg-transparent"
+        className="w-full mb-8 py-24  px-4 our-courses bg-customOrange sm:bg-transparent"
         data-aos="fade-down"
       >
         <div className="container mx-auto">
-          <div className="  mx-auto">
-            <h1 className="text-4xl font-bold bg-text-gradient bg-clip-text text-transparent">
+          <div className="mb-4 md:mb-8">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent inline-block">
               {t("courses.title")}
             </h1>
           </div>
@@ -151,7 +151,7 @@ const Pricing = () => {
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/Time Machine.png"
+                    src="/Time-machine.png"
                     alt="Calendar"
                     width={20}
                     height={20}
@@ -210,7 +210,7 @@ const Pricing = () => {
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/Time Machine.png"
+                    src="/Time-machine.png"
                     alt="Calendar"
                     width={20}
                     height={20}
@@ -269,7 +269,7 @@ const Pricing = () => {
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/Time Machine.png"
+                    src="/Time-machine.png"
                     alt="Calendar"
                     width={20}
                     height={20}
@@ -328,7 +328,7 @@ const Pricing = () => {
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/Time Machine.png"
+                    src="/Time-machine.png"
                     alt="Calendar"
                     width={20}
                     height={20}
@@ -388,7 +388,7 @@ const Pricing = () => {
               <div className="flex items-center mb-6">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
                   <Image
-                    src="/Time Machine.png"
+                    src="/Time-machine.png"
                     alt="Calendar"
                     width={20}
                     height={20}
