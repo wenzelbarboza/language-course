@@ -133,18 +133,7 @@ export default function Header() {
               key={index}
               href={item.href}
               className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
-              onClick={(e) => {
-                // if (item.scroll && item.name === t("header.courses")) {
-                //   e.preventDefault();
-                //   setIsMenuOpen(false);
-                //   const coursesSection = document.getElementById("courses");
-                //   if (coursesSection) {
-                //     coursesSection.scrollIntoView({ behavior: "smooth" });
-                //   }
-                // } else {
-                setIsMenuOpen(false);
-                // }
-              }}
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
             </Link>
