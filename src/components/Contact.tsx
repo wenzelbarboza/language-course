@@ -1,7 +1,7 @@
 "use client";
 
 import Aos from "aos";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "aos/dist/aos.css";
 import { useLanguage } from "@/context/LanguageContext";
 import { useForm } from "react-hook-form";
@@ -10,6 +10,7 @@ import { z } from "zod";
 import toast from "react-hot-toast";
 
 // Define the form schema with Zod
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const contactFormSchema = (t: any) =>
   z.object({
     name: z.string().min(1, { message: t("contact.validation.nameRequired") }),
