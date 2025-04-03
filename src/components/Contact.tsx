@@ -4,88 +4,68 @@ import Aos from "aos";
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import { useLanguage } from "@/context/LanguageContext";
-// import { is } from "drizzle-orm";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import toast from "react-hot-toast";
 
-export default function Contact() {
-  // Form state
-  const [formData, setFormData] = useState({
-    name: "",
-    surname: "",
-    email: "",
-    message: "",
+// Define the form schema with Zod
+const contactFormSchema = (t: any) =>
+  z.object({
+    name: z.string().min(1, { message: t("contact.validation.nameRequired") }),
+    surname: z
+      .string()
+      .min(1, { message: t("contact.validation.surnameRequired") }),
+    email: z.string().email({ message: t("contact.validation.emailInvalid") }),
+    message: z.string().min(5, { message: t("contact.validation.messageMin") }),
   });
 
+// Type for the form data
+type ContactFormData = z.infer<ReturnType<typeof contactFormSchema>>;
+
+export default function Contact() {
   const { t } = useLanguage();
 
-  // Form submission state
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({ type: null, message: "" });
-  const [warnings, setWarnings] = useState(false);
+  // Initialize react-hook-form with Zod validation
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema(t)),
+    defaultValues: {
+      name: "",
+      surname: "",
+      email: "",
+      message: "",
+    },
+  });
 
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-
-    console.log(formData);
-    console.log("clicked");
-
-    if (isSubmitting) {
-      return;
-    }
-
-    if (
-      !formData.name ||
-      !formData.surname ||
-      !formData.email ||
-      !formData.message
-    ) {
-      setWarnings(true);
-      return;
-    }
-
-    if (warnings) {
-      setWarnings(false);
-    }
-
-    setIsSubmitting(true);
+  const onSubmit = async (data: ContactFormData) => {
     try {
       // Send the POST request to the API
-      setIsSubmitting(true);
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
 
-      // const data = await response.json();
-
       if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message: "Data submitted successfully",
-        });
-        setFormData({
-          name: "",
-          surname: "",
-          email: "",
-          message: "",
-        });
+        toast.success("Message sent successfully!");
+        reset(); // Reset form after successful submission
       } else {
-        setSubmitStatus({ type: "error", message: "Error uploading data" });
+        toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
-      setSubmitStatus({ type: "error", message: "An error occurred" });
+      toast.error("An error occurred. Please try again later.");
       console.error("Submit error:", error);
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -125,72 +105,85 @@ export default function Contact() {
               </a> */}
             </div>
           </div>
-          <div className="lg:w-1/2 lg:pl-12" data-aos="fade-left">
-            <form className="bg-white lg:p-14 md:p-8 p-4 rounded-3xl shadow-lg">
+          <div className="lg:w-1/2 lg:pl-12 w-full" data-aos="fade-left">
+            <form
+              className="bg-white lg:p-14 md:p-8 p-4 rounded-3xl shadow-lg w-full max-w-none"
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full px-4 py-2 rounded-3xl border  focus:outline-none   bg-customBlue-inp border-none"
-                  required
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                />
-                <input
-                  type="text"
-                  placeholder="Surname"
-                  className="w-full px-4 py-2 rounded-3xl border  focus:outline-none   bg-customBlue-inp border-none"
-                  required
-                  value={formData.surname}
-                  onChange={(e) =>
-                    setFormData({ ...formData, surname: e.target.value })
-                  }
-                />
+                <div className="flex flex-col">
+                  <input
+                    type="text"
+                    placeholder={t("contact.name") || "姓名"}
+                    className={`w-full px-4 py-2 rounded-3xl border focus:outline-none bg-customBlue-inp border-none ${
+                      errors.name ? "border-red-500 border-2" : ""
+                    }`}
+                    {...register("name")}
+                  />
+                  {errors.name && (
+                    <span className="text-red-500 text-sm mt-1 ml-2">
+                      {errors.name.message}
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <input
+                    type="text"
+                    placeholder={t("contact.surname") || "姓氏"}
+                    className={`w-full px-4 py-2 rounded-3xl border focus:outline-none bg-customBlue-inp border-none ${
+                      errors.surname ? "border-red-500 border-2" : ""
+                    }`}
+                    {...register("surname")}
+                  />
+                  {errors.surname && (
+                    <span className="text-red-500 text-sm mt-1 ml-2">
+                      {errors.surname.message}
+                    </span>
+                  )}
+                </div>
               </div>
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full px-4 py-2 rounded-3xl border  focus:outline-none   mb-4 bg-customBlue-inp border-none"
-                required
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
-              <textarea
-                placeholder="Message"
-                rows={4}
-                className="w-full px-4 py-2 rounded-2xl border  focus:outline-none focus:ring-4  mb-4 bg-customBlue-inp border-none"
-                required
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-              ></textarea>
+              <div className="flex flex-col mb-4">
+                <input
+                  type="email"
+                  placeholder={t("contact.email") || "电子邮箱"}
+                  className={`w-full px-4 py-2 rounded-3xl border focus:outline-none bg-customBlue-inp border-none ${
+                    errors.email ? "border-red-500 border-2" : ""
+                  }`}
+                  {...register("email")}
+                />
+                {errors.email && (
+                  <span className="text-red-500 text-sm mt-1 ml-2">
+                    {errors.email.message}
+                  </span>
+                )}
+              </div>
+              <div className="flex flex-col mb-4">
+                <textarea
+                  placeholder={t("contact.message") || "留言内容"}
+                  rows={4}
+                  className={`w-full px-4 py-2 rounded-2xl border focus:outline-none bg-customBlue-inp border-none ${
+                    errors.message ? "border-red-500 border-2" : ""
+                  }`}
+                  {...register("message")}
+                ></textarea>
+                {errors.message && (
+                  <span className="text-red-500 text-sm mt-1 ml-2">
+                    {errors.message.message}
+                  </span>
+                )}
+              </div>
               {isSubmitting && (
-                <div className="text-center text-blue-700">
-                  submitting the data...
+                <div className="text-center text-blue-700 mb-4">
+                  {t("contact.submitting") || "正在提交您的留言..."}
                 </div>
               )}
               <button
-                onClick={handleSubmit}
+                type="submit"
                 className="w-full bg-customBlue-button text-white px-6 py-3 rounded-3xl hover:bg-customOrange transition duration-300"
                 disabled={isSubmitting}
               >
                 {t("header.messageUs")}
               </button>
-              {submitStatus.type === "success" && (
-                <div className="text-center text-green-700 mt-4">
-                  {submitStatus.message}
-                </div>
-              )}
-              {submitStatus.type === "error" && (
-                <div className="text-center text-red-700 mt-4">
-                  {submitStatus.message}
-                </div>
-              )}
             </form>
           </div>
         </div>

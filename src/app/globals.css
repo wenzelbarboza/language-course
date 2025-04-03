@@ -20,7 +20,8 @@
   .contact-section::after {
     content: '';
     position: absolute;
-    top: -55px;
+    /* old -55px */
+    top: -10px;
     left: 0;
     right: 0;
     bottom: 0;
