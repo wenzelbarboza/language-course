@@ -10,8 +10,9 @@ import { z } from "zod";
 import toast from "react-hot-toast";
 
 // Define the form schema with Zod
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const contactFormSchema = (t: any) =>
+export const FormSchema = (t: any) =>
   z.object({
     name: z.string().min(1, { message: t("contact.validation.nameRequired") }),
     surname: z
@@ -21,8 +22,7 @@ const contactFormSchema = (t: any) =>
     message: z.string().min(5, { message: t("contact.validation.messageMin") }),
   });
 
-// Type for the form data
-type ContactFormData = z.infer<ReturnType<typeof contactFormSchema>>;
+export type FormData = z.infer<ReturnType<typeof FormSchema>>;
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -33,8 +33,8 @@ export default function Contact() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema(t)),
+  } = useForm<FormData>({
+    resolver: zodResolver(FormSchema(t)),
     defaultValues: {
       name: "",
       surname: "",
@@ -47,10 +47,33 @@ export default function Contact() {
     Aos.init({ duration: 1000, once: true });
   }, []);
 
-  const onSubmit = async (data: ContactFormData) => {
+  // const onSubmit = async (data: FormData) => {
+  //   try {
+  //     // Send the POST request to the API
+  //     const response = await fetch("/api/contact", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
+
+  //     if (response.ok) {
+  //       toast.success("Message sent successfully!");
+  //       reset(); // Reset form after successful submission
+  //     } else {
+  //       toast.error("Failed to send message. Please try again.");
+  //     }
+  //   } catch (error) {
+  //     toast.error("An error occurred. Please try again later.");
+  //     console.error("Submit error:", error);
+  //   }
+  // };
+
+  const onSubmit = async (data: FormData) => {
     try {
       // Send the POST request to the API
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +81,7 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
+      if (response.status === 200) {
         toast.success("Message sent successfully!");
         reset(); // Reset form after successful submission
       } else {
