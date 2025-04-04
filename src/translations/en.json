@@ -89,6 +89,10 @@
   "contact.email": "Your Email",
   "contact.message": "Message",
   "contact.submitting": "Submitting your message...",
+  "contact.validation.nameRequired": "Name is required",
+  "contact.validation.surnameRequired": "Surname is required",
+  "contact.validation.emailInvalid": "Please enter a valid email address",
+  "contact.validation.messageMin": "Message must be at least 5 characters",
   
   "footer.follow": "FOLLOW US ON SOCIAL MEDIA",
   "footer.terms": "Terms of Service | Privacy Policy",

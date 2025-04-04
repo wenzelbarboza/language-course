@@ -90,6 +90,10 @@
   "contact.email": "电子邮箱",
   "contact.message": "留言内容",
   "contact.submitting": "正在提交您的留言...",
+  "contact.validation.nameRequired": "请输入姓名",
+  "contact.validation.surnameRequired": "请输入姓氏",
+  "contact.validation.emailInvalid": "请输入有效的电子邮箱",
+  "contact.validation.messageMin": "留言内容至少需要5个字符",
   
   "footer.follow": "关注我们的社交媒体平台",
   "footer.terms": "服务条款 | 隐私政策",
