@@ -113,9 +113,16 @@ export default function SuccessPage() {
 
           <div className="grid grid-cols-1 gap-4">
             <div className="border-b pb-4">
+              <p className="text-sm text-gray-500 mb-1">Name</p>
+              <p className="font-medium text-gray-800">
+                {session.custom_fields[0].text.value}
+              </p>
+            </div>
+
+            <div className="border-b pb-4">
               <p className="text-sm text-gray-500 mb-1">Email</p>
               <p className="font-medium text-gray-800">
-                {session.customer_email}
+                {session.customer_details.email}
               </p>
             </div>
 

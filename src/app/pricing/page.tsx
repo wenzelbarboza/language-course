@@ -4,6 +4,20 @@ import Contact from "@/components/Contact";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
+
+// code to check if the environment variable is set
+const superq = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_SUPERQ;
+const quick = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_QUICK;
+const standard = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_STANDARD;
+const quickSmall = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_QUICK_SMALL;
+const quickFamily = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_QUICK_FAMILY;
+
+if (!superq || !quick || !standard || !quickSmall || !quickFamily) {
+  throw new Error(
+    "One or more environment variables are not set. Please check your .env file."
+  );
+}
 
 const Pricing = () => {
   const { t } = useLanguage();
@@ -167,12 +181,12 @@ const Pricing = () => {
                   € 8000 {t("courses.person")}
                 </p>
               </div>
-              <button
-                onClick={scrollToContact}
-                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
-              >
-                {t("courses.enrollNow")}
-              </button>
+
+              <a href={superq} target="_blank">
+                <button className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300">
+                  {t("courses.enrollNow")}
+                </button>
+              </a>
             </div>
           </div>
           {/* Quick Plan */}
@@ -226,12 +240,11 @@ const Pricing = () => {
                   € 5000 {t("courses.person")}
                 </p>
               </div>
-              <button
-                onClick={scrollToContact}
-                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
-              >
-                {t("courses.enrollNow")}
-              </button>
+              <a href={quick} target="_blank">
+                <button className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300">
+                  {t("courses.enrollNow")}
+                </button>
+              </a>
             </div>
           </div>
           {/* Standard Plan */}
@@ -285,12 +298,11 @@ const Pricing = () => {
                   € 2500 {t("courses.person")}
                 </p>
               </div>
-              <button
-                onClick={scrollToContact}
-                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
-              >
-                {t("courses.enrollNow")}
-              </button>
+              <a href={standard} target="_blank">
+                <button className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300">
+                  {t("courses.enrollNow")}
+                </button>
+              </a>
             </div>
           </div>
           {/* Quick small plan */}
@@ -344,12 +356,11 @@ const Pricing = () => {
                   € 8000 {t("courses.person")}
                 </p>
               </div>
-              <button
-                onClick={scrollToContact}
-                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
-              >
-                {t("courses.enrollNow")}
-              </button>
+              <a href={quickSmall} target="_blank">
+                <button className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300">
+                  {t("courses.enrollNow")}
+                </button>
+              </a>
             </div>
           </div>
 
@@ -404,12 +415,11 @@ const Pricing = () => {
                   € 6800 {t("courses.person")}
                 </p>
               </div>
-              <button
-                onClick={scrollToContact}
-                className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300"
-              >
-                {t("courses.enrollNow")}
-              </button>
+              <a href={quickFamily} target="_blank">
+                <button className="w-full bg-red-500 hover:bg-red-600 text-white text-lg font-medium py-3 px-4 rounded-full transition duration-300">
+                  {t("courses.enrollNow")}
+                </button>
+              </a>
             </div>
           </div>
         </div>
