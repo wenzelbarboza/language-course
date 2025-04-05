@@ -1,6 +1,6 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 interface SessionData {
@@ -8,10 +8,40 @@ interface SessionData {
   amount_total: number;
   customer_email: string;
   payment_status: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
+// Main wrapper component that doesn't use useSearchParams directly
 export default function SuccessPage() {
+  return (
+    <Suspense fallback={<LoadingUI />}>
+      <SuccessContent />
+    </Suspense>
+  );
+}
+
+// Loading UI component
+function LoadingUI() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50">
+      <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full animate-pulse">
+        <div className="flex justify-center mb-6">
+          <Loader2 className="h-16 w-16 text-indigo-500 animate-spin" />
+        </div>
+        <h2 className="text-xl text-center font-medium text-gray-700">
+          Processing your payment
+        </h2>
+        <p className="text-gray-500 text-center mt-2">
+          Just a moment while we fetch your payment details...
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// Client component that uses useSearchParams
+function SuccessContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const sessionId = searchParams.get("session_id");
@@ -38,7 +68,7 @@ export default function SuccessPage() {
     } else {
       fetchSession();
     }
-  }, [sessionId]);
+  }, [sessionId, router]);
 
   if (loading) {
     return (
@@ -69,8 +99,8 @@ export default function SuccessPage() {
             Unable to fetch payment information
           </h2>
           <p className="text-gray-600 text-center mt-3">
-            We couldn't retrieve your payment details. Please contact customer
-            support.
+            We couldn&apos;t retrieve your payment details. Please contact
+            customer support.
           </p>
           <div className="mt-8">
             <button

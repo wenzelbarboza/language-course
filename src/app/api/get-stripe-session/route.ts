@@ -20,6 +20,7 @@ export async function GET(req: NextRequest) {
   try {
     const session = await stripe.checkout.sessions.retrieve(session_id);
     return NextResponse.json(session);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     console.error("Stripe Error:", err.message);
     return NextResponse.json({ error: err.message }, { status: 500 });

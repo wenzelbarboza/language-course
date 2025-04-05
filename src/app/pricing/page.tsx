@@ -4,7 +4,6 @@ import Contact from "@/components/Contact";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import Link from "next/link";
 
 // code to check if the environment variable is set
 const superq = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_SUPERQ;
