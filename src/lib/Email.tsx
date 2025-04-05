@@ -40,27 +40,27 @@ export function Email(props: Props) {
             <Heading as="h2" style={subHeadingStyle}>
               Contact Details
             </Heading>
-            <Row>
-              <Column>
+            <Row style={rowStyle}>
+              <Column style={labelColumnStyle}>
                 <Text style={labelStyle}>Name:</Text>
               </Column>
-              <Column>
+              <Column style={valueColumnStyle}>
                 <Text style={valueStyle}>{name}</Text>
               </Column>
             </Row>
-            <Row>
-              <Column>
+            <Row style={rowStyle}>
+              <Column style={labelColumnStyle}>
                 <Text style={labelStyle}>Surname:</Text>
               </Column>
-              <Column>
+              <Column style={valueColumnStyle}>
                 <Text style={valueStyle}>{surname}</Text>
               </Column>
             </Row>
-            <Row>
-              <Column>
+            <Row style={rowStyle}>
+              <Column style={labelColumnStyle}>
                 <Text style={labelStyle}>Email:</Text>
               </Column>
-              <Column>
+              <Column style={valueColumnStyle}>
                 <Text style={valueStyle}>
                   <Link href={`mailto:${email}`} style={linkStyle}>
                     {email}
@@ -185,6 +185,22 @@ const footerTextStyle = {
   color: "#8898aa",
   fontSize: "12px",
   margin: "4px 0",
+};
+
+const rowStyle = {
+  margin: "0 0 8px",
+  width: "100%",
+};
+
+const labelColumnStyle = {
+  width: "30%",
+  paddingRight: "16px",
+  textAlign: "right" as const,
+};
+
+const valueColumnStyle = {
+  width: "70%",
+  textAlign: "left" as const,
 };
 
 export default Email;
