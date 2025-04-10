@@ -75,9 +75,24 @@ export default function Faq() {
                 />
               </svg>
             </summary>
-            <p className="mt-4 px-4 leading-relaxed text-gray-700 whitespace-pre-line">
-              {item.answer}
-            </p>
+            <div className="mt-4 px-4 leading-relaxed text-gray-700">
+              {item.question === t("faq.question1") ||
+              item.question === t("faq.question8") ? (
+                <div className="prose prose-sm max-w-none">
+                  <p>{item.answer.split("•")[0]}</p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    {item.answer
+                      .split("•")
+                      .slice(1)
+                      .map((point, idx) => (
+                        <li key={idx}>{point.trim()}</li>
+                      ))}
+                  </ul>
+                </div>
+              ) : (
+                <p className="whitespace-pre-line">{item.answer}</p>
+              )}
+            </div>
           </details>
         ))}
       </div>
