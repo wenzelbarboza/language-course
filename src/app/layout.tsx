@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "Poruguese Language Learning Platform",
   generator: "v0.dev",
   icons: {
-    icon: "/fav_ic.png",
+    icon: "fav_ic.ico",
   },
 };
 
