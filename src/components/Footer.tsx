@@ -56,19 +56,29 @@ export default function Footer() {
         </div>
         <div>
           <div className="mb-4 hidden sm:block">
-            <Image
-              src="/logo.png"
-              width={200}
-              height={200}
-              alt="30-Day Intensive Learning"
-              // className="w-5 h-5 object-contain flex-shrink-0"
-            />
+            <Link href={"/"}>
+              <Image
+                src="/logo.png"
+                width={200}
+                height={200}
+                alt="30-Day Intensive Learning"
+                // className="w-5 h-5 object-contain flex-shrink-0"
+              />
+            </Link>
           </div>
           <ul className="flex gap-1 flex-col items-center sm:items-start">
-            <li className="text-xs font-light">{t("footer.home")}</li>
-            <li className="text-xs font-light">{t("footer.about")}</li>
-            <li className="text-xs font-light">{t("footer.courses")}</li>
-            <li className="text-xs font-light">{t("footer.contact")}</li>
+            <li className="text-xs font-light">
+              <Link href={"/"}>{t("footer.home")}</Link>
+            </li>
+            <li className="text-xs font-light">
+              <Link href={"/about"}>{t("footer.about")}</Link>
+            </li>
+            <li className="text-xs font-light">
+              <Link href={"/pricing"}>{t("footer.courses")}</Link>
+            </li>
+            <li className="text-xs font-light">
+              <Link href={"#contact"}>{t("footer.contact")}</Link>
+            </li>
           </ul>
         </div>
       </div>
