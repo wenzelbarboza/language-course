@@ -6,6 +6,7 @@ import Why from "@/components/Why";
 import Review from "@/components/Review";
 import CardContainer from "@/components/CardContainer";
 import EnrollNow from "@/components/EnrollNow";
+import LearningPlans from "@/components/LearningPlans";
 import { Toaster } from "react-hot-toast";
 
 export default function Home() {
@@ -16,7 +17,8 @@ export default function Home() {
       <Why />
       <CardContainer />
       <Review />
-      <EnrollNow />
+      <LearningPlans />
+      {/* <EnrollNow /> */}
       {/* <PricingTable /> */}
       <Faq />
       <Contact />
