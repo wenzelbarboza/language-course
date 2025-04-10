@@ -3,6 +3,7 @@ import Aos from "aos";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 export default function Banner() {
   const { t } = useLanguage();
@@ -13,10 +14,10 @@ export default function Banner() {
   return (
     <section
       id="top"
-      className="bg-banner bg-cover bg-center bg-no-repeat z-[-50] relative overflow-hidden"
+      className="bg-banner bg-cover bg-center bg-no-repeat  relative overflow-hidden"
     >
-      <div className="w-full min-h-screen bg-white bg-opacity-80 py-10 md:py-20 z-[-49] relative px-2 sm:px-4">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="w-full min-h-screen bg-white bg-opacity-80 py-10 md:py-20 z-[1] relative px-2 sm:px-4">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between z-[1000] bg-transparent">
           <div className="md:w-1/2 lg:w-5/12 mb-10 md:mb-0 text-center md:text-left">
             <div
               className="w-full md:w-full lg:max-w-[32rem]"
@@ -34,20 +35,15 @@ export default function Banner() {
               <p className="text-l mb-6 opacity-80">
                 {t("banner.description")}
               </p>
-            </div>
-            {/* <form className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="text"
-                placeholder="Your website URL..."
-                className="flex-grow px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button
-                type="submit"
-                className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
+              <Link
+                href="/pricing"
+                className="inline-block px-8 py-3 text-white font-medium rounded-full bg-gradient-to-r from-[#eb5b35] to-[#ea456b] hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center z-[1000]"
+                data-aos="fade-up"
+                data-aos-delay="200"
               >
-                Analyze Site
-              </button>
-            </form> */}
+                {t("banner.enrollNow")}
+              </Link>
+            </div>
           </div>
           <div
             className="md:w-1/2 lg:w-5/12 flex justify-center md:justify-end"

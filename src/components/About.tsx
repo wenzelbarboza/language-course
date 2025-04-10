@@ -38,7 +38,7 @@ export default function About() {
     // <section id="about" className="about-section relative py-20 ">
     <section id="about" className="lg:about-section relative  ">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-2 sm:px-4 mt-4 sm:mt-0">
-        <div className="lg:w-1/3 mb-10 lg:mb-0 " data-aos="fade-right">
+        <div className="lg:w-1/3 mb-10 lg:mb-0 z-[4]" data-aos="fade-right">
           <Image
             src="/about-img.png?height=500&width=400"
             alt="About us"
@@ -46,7 +46,7 @@ export default function About() {
             height={500}
           />
         </div>
-        <div className="lg:w-2/3 lg:pl-12">
+        <div className="lg:w-2/3 lg:pl-12 z-[4]">
           <div
             className="grid md:grid-cols-2 gap-8 text-white"
             data-aos="fade-up"

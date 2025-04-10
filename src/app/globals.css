@@ -15,7 +15,7 @@
     background-position: center;
     background-size: cover;
     height: 650px;
-    z-index: -1; /* Ensure it's behind the content */
+    z-index: 3;
   }
   .contact-section::after {
     content: '';
